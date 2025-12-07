@@ -77,8 +77,8 @@ const Contact = () => {
       exit="exit"
       transition={pageTransition}
     >
-      {/* Background */}
-      <div className="absolute inset-0 -z-10">
+      {/* Background - ReactBits Beams */}
+      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
         <Beams
           beamWidth={2}
           beamHeight={12}
@@ -90,7 +90,7 @@ const Contact = () => {
           rotation={0}
         />
       </div>
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
 
       {/* Toast Notification */}
       <AnimatePresence>
