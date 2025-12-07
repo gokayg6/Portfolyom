@@ -87,7 +87,7 @@ const StaggeredMenu = ({
               exit={{ rotate: 90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <FiX className="w-6 h-6" />
+              <FiX className="w-5 h-5" />
             </motion.div>
           ) : (
             <motion.div
