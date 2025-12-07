@@ -58,7 +58,7 @@ const Projects = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
 
       {/* Content */}
-      <div className="relative pt-32 pb-20 px-6">
+      <div className="relative pt-32 pb-20 px-6 z-[2]">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <motion.div
