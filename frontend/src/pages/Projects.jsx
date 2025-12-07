@@ -45,7 +45,7 @@ const Projects = () => {
       {/* Background - ReactBits Beams */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
         <Beams
-          beamWidth={3}
+          beamWidth={0.3}
           beamHeight={30}
           beamNumber={20}
           lightColor="#60a5fa"
