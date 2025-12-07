@@ -38,9 +38,9 @@ const Home = () => {
       {/* Background - ReactBits Beams */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
         <Beams
-          beamWidth={3}
-          beamHeight={30}
-          beamNumber={20}
+          beamWidth={1.5}
+          beamHeight={20}
+          beamNumber={8}
           lightColor="#ffffff"
           speed={2}
           noiseIntensity={1.75}
