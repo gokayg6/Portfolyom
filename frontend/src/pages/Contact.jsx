@@ -80,14 +80,14 @@ const Contact = () => {
       {/* Background - ReactBits Beams */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
         <Beams
-          beamWidth={2}
-          beamHeight={12}
-          beamNumber={8}
+          beamWidth={3}
+          beamHeight={30}
+          beamNumber={20}
           lightColor="#34d399"
           speed={2}
-          noiseIntensity={1.5}
-          scale={0.15}
-          rotation={0}
+          noiseIntensity={1.75}
+          scale={0.2}
+          rotation={30}
         />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
