@@ -41,20 +41,11 @@ const Projects = () => {
       exit="exit"
       transition={pageTransition}
     >
-      {/* Background - ReactBits Beams */}
-      <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
-        <Suspense fallback={<div className="w-full h-full bg-[#0a0a0f]" />}>
-          <Beams
-            beamWidth={2}
-            beamHeight={30}
-            beamNumber={4}
-            lightColor="#60a5fa"
-            speed={2}
-            noiseIntensity={1.75}
-            scale={0.2}
-            rotation={30}
-          />
-        </Suspense>
+      {/* Background - Simple gradient for performance */}
+      <div className="absolute inset-0 z-0">
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-[#0a0a0f] to-purple-900/20" />
+        <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl" />
+        <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-purple-500/10 rounded-full blur-3xl" />
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
 
