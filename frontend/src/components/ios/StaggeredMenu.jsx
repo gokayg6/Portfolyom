@@ -97,7 +97,7 @@ const StaggeredMenu = ({
               exit={{ rotate: -90, opacity: 0 }}
               transition={{ duration: 0.2 }}
             >
-              <FiMenu className="w-6 h-6" />
+              <FiMenu className="w-5 h-5" />
             </motion.div>
           )}
         </AnimatePresence>
