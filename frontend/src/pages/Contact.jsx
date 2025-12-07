@@ -126,7 +126,7 @@ const Contact = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative pt-32 pb-20 px-6">
+      <div className="relative pt-32 pb-20 px-6 z-[2]">
         <div className="max-w-6xl mx-auto">
           {/* Header */}
           <motion.div
