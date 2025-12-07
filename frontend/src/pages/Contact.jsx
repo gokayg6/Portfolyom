@@ -80,9 +80,9 @@ const Contact = () => {
       {/* Background - ReactBits Beams */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
         <Beams
-          beamWidth={1}
+          beamWidth={2}
           beamHeight={30}
-          beamNumber={20}
+          beamNumber={6}
           lightColor="#34d399"
           speed={2}
           noiseIntensity={1.75}
