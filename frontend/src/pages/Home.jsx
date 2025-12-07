@@ -40,7 +40,7 @@ const Home = () => {
         <Beams
           beamWidth={2}
           beamHeight={30}
-          beamNumber={6}
+          beamNumber={4}
           lightColor="#ffffff"
           speed={2}
           noiseIntensity={1.75}
