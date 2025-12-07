@@ -82,7 +82,7 @@ const Contact = () => {
         <Beams
           beamWidth={2}
           beamHeight={30}
-          beamNumber={6}
+          beamNumber={4}
           lightColor="#34d399"
           speed={2}
           noiseIntensity={1.75}
