@@ -46,16 +46,18 @@ const Projects = () => {
     >
       {/* Background - ReactBits Beams */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
-        <Beams
-          beamWidth={2}
-          beamHeight={30}
-          beamNumber={6}
-          lightColor="#60a5fa"
-          speed={2}
-          noiseIntensity={1.75}
-          scale={0.2}
-          rotation={30}
-        />
+        <Suspense fallback={<div className="w-full h-full bg-[#0a0a0f]" />}>
+          <Beams
+            beamWidth={2}
+            beamHeight={30}
+            beamNumber={4}
+            lightColor="#60a5fa"
+            speed={2}
+            noiseIntensity={1.75}
+            scale={0.2}
+            rotation={30}
+          />
+        </Suspense>
       </div>
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
 
