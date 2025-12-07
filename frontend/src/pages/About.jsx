@@ -76,9 +76,9 @@ const About = () => {
       {/* Background - ReactBits Beams */}
       <div style={{ width: '100%', height: '100%', position: 'absolute', top: 0, left: 0, zIndex: 0 }}>
         <Beams
-          beamWidth={1}
+          beamWidth={0.8}
           beamHeight={30}
-          beamNumber={20}
+          beamNumber={10}
           lightColor="#a78bfa"
           speed={2}
           noiseIntensity={1.75}
