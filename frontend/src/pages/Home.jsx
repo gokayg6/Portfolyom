@@ -50,7 +50,7 @@ const Home = () => {
       </div>
 
       {/* Overlay for readability */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/40 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/60 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
 
       {/* Hero Section */}
       <section className="relative pt-32 pb-16 px-6 z-[2]">
