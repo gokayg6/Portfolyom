@@ -53,7 +53,7 @@ const Home = () => {
       <div className="absolute inset-0 bg-gradient-to-b from-[#0a0a0f]/40 via-transparent to-[#0a0a0f] pointer-events-none z-[1]" />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-16 px-6">
+      <section className="relative pt-32 pb-16 px-6 z-[2]">
         <div className="max-w-6xl mx-auto">
           {/* Hero Content */}
           <div className="text-center mb-16">
