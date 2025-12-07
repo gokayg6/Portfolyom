@@ -1,4 +1,4 @@
-import React, { useState, useMemo, lazy, Suspense } from 'react';
+import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiX, FiExternalLink, FiGithub } from 'react-icons/fi';
 import GlassCard from '../components/ios/GlassCard';
@@ -7,18 +7,15 @@ import FlowingMenu from '../components/ios/FlowingMenu';
 import ProjectCard from '../components/ios/ProjectCard';
 import { projects, categories, developers } from '../data/mock';
 
-// Lazy load Beams for better performance
-const Beams = lazy(() => import('../components/ios/Beams'));
-
 const pageVariants = {
-  initial: { opacity: 0 },
-  animate: { opacity: 1 },
-  exit: { opacity: 0 }
+  initial: { opacity: 0, scale: 0.92, y: 24 },
+  animate: { opacity: 1, scale: 1, y: 0 },
+  exit: { opacity: 0, scale: 0.96, y: 16 }
 };
 
 const pageTransition = {
-  duration: 0.3,
-  ease: 'easeOut'
+  duration: 0.45,
+  ease: [0.16, 1, 0.3, 1]
 };
 
 const Projects = () => {
