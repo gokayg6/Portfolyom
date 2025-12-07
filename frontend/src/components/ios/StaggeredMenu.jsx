@@ -68,10 +68,11 @@ const StaggeredMenu = ({
         className={`
           ${isFixed ? 'fixed' : 'absolute'}
           ${position === 'right' ? 'right-6' : 'left-6'}
-          top-6 z-[100]
-          p-3 rounded-xl
-          bg-white/10 backdrop-blur-xl border border-white/20
-          transition-colors hover:bg-white/20
+          top-7 z-[100]
+          p-2.5 rounded-full
+          bg-white/[0.08] backdrop-blur-xl border border-white/[0.15]
+          transition-colors hover:bg-white/[0.15]
+          shadow-lg shadow-black/10
         `}
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
