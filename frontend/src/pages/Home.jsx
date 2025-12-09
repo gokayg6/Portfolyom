@@ -4,7 +4,7 @@ import { FiArrowRight, FiCode, FiLayers, FiUsers } from 'react-icons/fi';
 import { Link } from 'react-router-dom';
 import Beams from '../components/ios/Beams';
 import DeveloperCard from '../components/ios/DeveloperCard';
-import FluidButton from '../components/ios/FluidButton';
+import GlassSurfaceButton from '../components/ios/GlassSurfaceButton';
 import GlassCard from '../components/ios/GlassCard';
 import { developers, projects } from '../data/mock';
 
@@ -98,26 +98,26 @@ const Home = () => {
               transition={{ delay: 0.4 }}
             >
               <Link to="/projects">
-                <FluidButton
+                <GlassSurfaceButton
                   variant="secondary"
                   size="lg"
                   icon={<FiArrowRight className="w-5 h-5" />}
                   iconPosition="right"
                 >
                   Projelerimizi Gör
-                </FluidButton>
+                </GlassSurfaceButton>
               </Link>
               <Link to="/contact">
-                <FluidButton variant="ghost" size="lg">
+                <GlassSurfaceButton variant="ghost" size="lg">
                   İletişime Geç
-                </FluidButton>
+                </GlassSurfaceButton>
               </Link>
             </motion.div>
           </div>
 
           {/* Stats */}
           <motion.div
-            className="grid grid-cols-3 gap-4 max-w-xl mx-auto mb-20"
+            className="grid grid-cols-3 gap-2 md:gap-4 max-w-xl mx-auto mb-12 md:mb-20 px-2"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
@@ -125,22 +125,22 @@ const Home = () => {
             {stats.map((stat, i) => (
               <GlassCard
                 key={stat.label}
-                className="p-4 text-center"
+                className="p-3 md:p-4 text-center"
                 blur="xl"
                 opacity={8}
                 hover={false}
               >
-                <stat.icon className="w-5 h-5 text-blue-400 mx-auto mb-2" />
-                <div className="text-2xl font-bold text-white mb-1">
+                <stat.icon className="w-4 h-4 md:w-5 md:h-5 text-blue-400 mx-auto mb-1 md:mb-2" />
+                <div className="text-lg md:text-2xl font-bold text-white mb-0.5 md:mb-1">
                   {stat.value}
                 </div>
-                <div className="text-white/50 text-xs">{stat.label}</div>
+                <div className="text-white/50 text-[10px] md:text-xs">{stat.label}</div>
               </GlassCard>
             ))}
           </motion.div>
 
           {/* Developer Cards */}
-          <div className="flex flex-col md:flex-row items-center justify-center gap-8">
+          <div className="flex flex-col items-center justify-center gap-4 md:gap-8 md:flex-row px-2">
             {developers.map((dev, index) => (
               <DeveloperCard key={dev.id} developer={dev} index={index} />
             ))}
@@ -199,14 +199,14 @@ const Home = () => {
 
           <div className="text-center">
             <Link to="/projects">
-              <FluidButton
+              <GlassSurfaceButton
                 variant="primary"
                 size="md"
                 icon={<FiArrowRight className="w-4 h-4" />}
                 iconPosition="right"
               >
                 Tüm Projeleri Gör
-              </FluidButton>
+              </GlassSurfaceButton>
             </Link>
           </div>
         </div>
@@ -229,9 +229,9 @@ const Home = () => {
                 Hemen iletişime geçin!
               </p>
               <Link to="/contact">
-                <FluidButton variant="secondary" size="lg">
+                <GlassSurfaceButton variant="secondary" size="lg">
                   Bize Ulaşın
-                </FluidButton>
+                </GlassSurfaceButton>
               </Link>
             </motion.div>
           </GlassCard>

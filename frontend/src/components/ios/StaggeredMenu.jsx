@@ -30,7 +30,7 @@ const StaggeredMenu = ({
 
   const menuVariants = {
     closed: {
-      clipPath: 'circle(0% at calc(100% - 40px) 40px)',
+      clipPath: 'circle(0% at 50% 40px)',
       transition: {
         type: 'spring',
         stiffness: 300,
@@ -38,7 +38,7 @@ const StaggeredMenu = ({
       }
     },
     open: {
-      clipPath: 'circle(150% at calc(100% - 40px) 40px)',
+      clipPath: 'circle(150% at 50% 40px)',
       transition: {
         type: 'spring',
         stiffness: 80,
@@ -62,42 +62,56 @@ const StaggeredMenu = ({
 
   return (
     <>
-      {/* Menu Toggle Button */}
+      {/* Menu Toggle Button - Wide, Centered at Top */}
       <motion.button
         onClick={toggleMenu}
         className={`
           ${isFixed ? 'fixed' : 'absolute'}
-          ${position === 'right' ? 'right-6' : 'left-6'}
-          top-7 z-[100]
-          p-2.5 rounded-full
+          left-1/2 top-4 md:top-6 z-[100]
+          w-[calc(100%-2rem)] max-w-[380px] md:max-w-[600px] py-2 md:py-2.5 rounded-2xl
           bg-white/[0.08] backdrop-blur-xl border border-white/[0.15]
-          transition-colors hover:bg-white/[0.15]
+          transition-all duration-150 hover:bg-white/[0.15] active:bg-white/[0.12]
           shadow-lg shadow-black/10
+          flex items-center justify-center gap-4
         `}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.95 }}
-        style={{ color: menuButtonColor }}
+        style={{
+          color: menuButtonColor,
+          transform: 'translateX(-50%)',
+        }}
       >
         <AnimatePresence mode="wait">
           {isOpen ? (
             <motion.div
               key="close"
-              initial={{ rotate: -90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: 90, opacity: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
+              className="flex items-center gap-4"
             >
-              <FiX className="w-5 h-5" />
+              {/* X icon */}
+              <div className="relative w-5 h-5">
+                <span className="absolute top-1/2 left-0 w-full h-[2px] bg-white rounded-full transform -translate-y-1/2 rotate-45" />
+                <span className="absolute top-1/2 left-0 w-full h-[2px] bg-white rounded-full transform -translate-y-1/2 -rotate-45" />
+              </div>
+              <span className="text-sm md:text-base font-medium text-white/90">Kapat</span>
             </motion.div>
           ) : (
             <motion.div
               key="menu"
-              initial={{ rotate: 90, opacity: 0 }}
-              animate={{ rotate: 0, opacity: 1 }}
-              exit={{ rotate: -90, opacity: 0 }}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
+              className="flex items-center gap-4"
             >
-              <FiMenu className="w-5 h-5" />
+              {/* Hamburger icon - compact lines */}
+              <div className="flex flex-col gap-[4px]">
+                <span className="block w-5 h-[2px] bg-white rounded-full" />
+                <span className="block w-5 h-[2px] bg-white rounded-full" />
+                <span className="block w-5 h-[2px] bg-white rounded-full" />
+              </div>
+              <span className="text-sm md:text-base font-medium text-white/90">Kategoriler</span>
             </motion.div>
           )}
         </AnimatePresence>
@@ -110,7 +124,7 @@ const StaggeredMenu = ({
             {/* Backdrop */}
             {closeOnClickAway && (
               <motion.div
-                className="fixed inset-0 z-[80]"
+                className="fixed inset-0 z-[80] bg-black/20 backdrop-blur-sm"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
@@ -122,7 +136,10 @@ const StaggeredMenu = ({
             <motion.div
               className="fixed inset-0 z-[90] flex flex-col justify-center"
               style={{
-                background: `linear-gradient(135deg, ${colors[0]}dd 0%, ${colors[1]}dd 100%)`
+                background: 'rgba(255, 255, 255, 0.08)',
+                backdropFilter: 'blur(20px) saturate(180%) brightness(1.1)',
+                WebkitBackdropFilter: 'blur(20px) saturate(180%) brightness(1.1)',
+                boxShadow: 'inset 0 1px 0 0 rgba(255, 255, 255, 0.2), inset 0 -1px 0 0 rgba(255, 255, 255, 0.1), 0 8px 32px 0 rgba(31, 38, 135, 0.1)'
               }}
               variants={menuVariants}
               initial="closed"

@@ -13,12 +13,17 @@ import Home from './pages/Home';
 import About from './pages/About';
 import Projects from './pages/Projects';
 import Contact from './pages/Contact';
+import Admin from './pages/Admin';
+
+// Hooks
+import { useVisitTracker } from './hooks/use-visit-tracker';
 
 // Data
 import { navItems, socialLinks } from './data/mock';
 
 const AnimatedRoutes = () => {
   const location = useLocation();
+  useVisitTracker(); // Track visits on route change
 
   return (
     <AnimatePresence mode="wait">
@@ -27,6 +32,7 @@ const AnimatedRoutes = () => {
         <Route path="/about" element={<About />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/admin" element={<Admin />} />
       </Routes>
     </AnimatePresence>
   );

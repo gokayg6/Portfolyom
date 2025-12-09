@@ -19,7 +19,7 @@ const DeveloperCard = ({ developer, index = 0 }) => {
       }}
     >
       <GlassCard
-        className="p-6 md:p-8 max-w-md w-full"
+        className="p-5 md:p-8 w-full max-w-[calc(100vw-2rem)] md:max-w-md"
         blur="2xl"
         opacity={8}
       >
